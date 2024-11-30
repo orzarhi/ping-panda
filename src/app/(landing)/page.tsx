@@ -1,5 +1,5 @@
 import React from 'react';
-import { MaxWidthWrapper, Heading, ShinyButton } from './components';
+import { MaxWidthWrapper, Heading, ShinyButton } from '@/components';
 import { Check } from 'lucide-react';
 
 export default function Page() {
