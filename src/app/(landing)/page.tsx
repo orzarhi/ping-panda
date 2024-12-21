@@ -6,11 +6,12 @@ import {
   MockDiscordUI,
   DiscordMessage,
 } from '@/components';
-import { Check } from 'lucide-react';
+import { Check, Star } from 'lucide-react';
 import { AnimatedList } from '@/components/ui/animated-list';
 import Image from 'next/image';
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Icons } from '@/components/icons';
 
 // 2:12:50
 export default function Page() {
@@ -27,7 +28,7 @@ export default function Page() {
     headers: {
       Authorization: "Bearer <YOUR_API_KEY>"
     }
-  })`
+  })`;
   return (
     <>
       <section className="relative py-24 sm:py-32 bg-brand-25">
@@ -128,7 +129,6 @@ export default function Page() {
           </MaxWidthWrapper>
         </div>
       </section>
-
       <section className="relative py-24 sm:py-32 bg-brand-25">
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
           <div>
@@ -148,8 +148,8 @@ export default function Page() {
                     Real-time notifications
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Get notified about critical events the moment they happen,
-                    no matter if you're at home or on the go.
+                    Get notified about critical events the moment they happen, no matter
+                    if you're at home or on the go.
                   </p>
                 </div>
 
@@ -177,8 +177,8 @@ export default function Page() {
                     Track Any Event
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    From new user signups to successful payments, PingPanda
-                    notifies you for all critical events in your SaaS.
+                    From new user signups to successful payments, PingPanda notifies you
+                    for all critical events in your SaaS.
                   </p>
                 </div>
                 <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
@@ -204,8 +204,8 @@ export default function Page() {
                     Track Any Properties
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Add any custom data you like to an event, such as a user
-                    email, a purchase amount or an exceeded quota.
+                    Add any custom data you like to an event, such as a user email, a
+                    purchase amount or an exceeded quota.
                   </p>
                 </div>
 
@@ -233,8 +233,8 @@ export default function Page() {
                     Easy Integration
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                    Connect PingPanda with your existing workflows in minutes
-                    and call our intuitive logging API from any language.
+                    Connect PingPanda with your existing workflows in minutes and call our
+                    intuitive logging API from any language.
                   </p>
                 </div>
 
@@ -256,12 +256,12 @@ export default function Page() {
                             ...oneDark,
                             'pre[class*="language-"]': {
                               ...oneDark['pre[class*="language-"]'],
-                              background: "transparent",
-                              overflow: "hidden",
+                              background: 'transparent',
+                              overflow: 'hidden',
                             },
                             'code[class*="language-"]': {
                               ...oneDark['code[class*="language-"]'],
-                              background: "transparent",
+                              background: 'transparent',
                             },
                           }}
                         >
@@ -278,7 +278,91 @@ export default function Page() {
           </div>
         </MaxWidthWrapper>
       </section>
-      <section></section>
+      <section className="relative py-24 sm:py-32 bg-white">
+        <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
+          <div>
+            <h2 className="text-center text-base/7 font-semibold text-brand-600">
+              Real-World Experiences
+            </h2>
+            <Heading className="text-center">What our customers say</Heading>
+          </div>
+
+          <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
+            {/* first customer review */}
+            <div className="flex flex-auto flex-col gap-4 bg-brand-25 p-6 sm:p-8 lg:p-16 rounded-t-[2rem] lg:rounded-tr-none lg:rounded-l-[2rem]">
+              <div className="flex gap-0.5 mb-2 justify-center lg:justify-start">
+                <Star className="size-5 text-brand-600 fill-brand-600" />
+                <Star className="size-5 text-brand-600 fill-brand-600" />
+                <Star className="size-5 text-brand-600 fill-brand-600" />
+                <Star className="size-5 text-brand-600 fill-brand-600" />
+                <Star className="size-5 text-brand-600 fill-brand-600" />
+              </div>
+
+              <p className="text-base sm:text-lg lg:text-lg/8 font-medium tracking-tight text-brand-950 text-center lg:text-left text-pretty">
+                PingPanda has been a game-changer for me. I've been using it for two
+                months now and seeing sales pop up in real-time is super satisfying.
+              </p>
+
+              <div className="flex flex-col justify-center lg:justify-start sm:flex-row items-center sm:items-start gap-4 mt-2">
+                <Image
+                  src="/user-1.png"
+                  className="rounded-full object-cover"
+                  alt="Random user"
+                  width={48}
+                  height={48}
+                />
+                <div className="flex flex-col items-center sm:items-start">
+                  <p className="font-semibold flex items-center">
+                    Freya Larsson
+                    <Icons.verificationBadge className="size-4 inline-block ml-1.5" />
+                  </p>
+                  <p className="text-sm text-gray-600">@itsfreya</p>
+                </div>
+              </div>
+            </div>
+
+            {/* second customer review */}
+            <div className="flex flex-auto flex-col gap-4 bg-brand-25 p-6 sm:p-8 lg:p-16 rounded-b-[2rem] lg:rounded-bl-none lg:rounded-r-[2rem]">
+              <div className="flex gap-0.5 mb-2 justify-center lg:justify-start">
+                <Star className="size-5 text-brand-600 fill-brand-600" />
+                <Star className="size-5 text-brand-600 fill-brand-600" />
+                <Star className="size-5 text-brand-600 fill-brand-600" />
+                <Star className="size-5 text-brand-600 fill-brand-600" />
+                <Star className="size-5 text-brand-600 fill-brand-600" />
+              </div>
+
+              <p className="text-base sm:text-lg lg:text-lg/8 font-medium tracking-tight text-brand-950 text-center lg:text-left text-pretty">
+                PingPanda's been paying off for our SaaS. Nice to have simple way to see
+                how we're doing day-to-day. Definitely makes our lives easier.
+              </p>
+
+              <div className="flex flex-col justify-center lg:justify-start sm:flex-row items-center sm:items-start gap-4 mt-2">
+                <Image
+                  src="/user-2.png"
+                  className="rounded-full object-cover"
+                  alt="Random user"
+                  width={48}
+                  height={48}
+                />
+                <div className="flex flex-col items-center sm:items-start">
+                  <p className="font-semibold flex items-center">
+                    Kai Durant
+                    <Icons.verificationBadge className="size-4 inline-block ml-1.5" />
+                  </p>
+                  <p className="text-sm text-gray-600">@kdurant_</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ShinyButton
+            href="/sign-up"
+            className="relative z-10 h-14 w-full max-w-xs text-base shadow-lg transition-shadow duration-300 hover:shadow-xl"
+          >
+            Start For Free Today
+          </ShinyButton>
+        </MaxWidthWrapper>
+      </section>
     </>
   );
 }
